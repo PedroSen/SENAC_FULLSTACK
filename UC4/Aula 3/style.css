@@ -1,0 +1,131 @@
+*{
+    border-width: 0;
+    overflow: scroll;
+    margin: 0 auto;
+}
+
+#container{
+    margin: 0 auto;
+    width: 50%;
+    background-color: white;
+}
+
+header{
+    text-align: center;
+}
+
+#logo {
+    justify-self: center;
+    width: 200px;
+    margin: 20px auto;
+}
+
+nav{
+    text-align: center;
+    background-color: black;
+    border-radius: 60px;
+    padding: 10px 0;
+    margin-bottom: 5px;
+}
+
+nav a{
+    margin: 0 1% 0 1%;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+}
+
+a:hover{
+    color: rgb(158, 172, 202);
+    text-decoration: underline;
+}
+
+a:active{
+    color: rgb(131, 187, 202);
+    text-decoration: underline;
+}
+
+#banner{
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#banner img{
+    width: 100%
+}
+
+article{
+    width: 65%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+aside{
+    width: 30%;
+    float: right;
+    margin-bottom: 20px;
+}
+
+h1, h2, p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+}
+
+footer{
+    background-color: black;
+    padding: 10px 0 10px 0;
+    margin-bottom: 10px;
+    color: white;
+    display: block;
+}
+
+footer p{
+    text-align: center;
+}
+
+#anunciotablet{
+    width: 90%;
+    background-color: rgb(226, 90, 0);
+    text-align: center;
+    padding: 5px 0;
+    margin-bottom: 10px;
+    display: none;
+}
+
+@media screen and (max-width: 1400px) and (min-width: 701px){
+    #container{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    #container{
+        width: 90%;
+    }
+    nav{
+        border-radius: 5px;
+        padding: 0 0 5px 0;
+    }
+    nav a{
+        display: block;
+        border-top: 1px solid #CCC;
+        background-color: black;
+        padding: 5px;
+    }
+    #logo{
+        width: 30%;
+        min-width: 130px;
+    }
+    article, aside{
+       width: 85%; 
+       float:none
+    }
+}
+
+@media screen and (max-width: 700px) and (min-width: 600px){
+    #anunciotablet{
+        display: block;
+    }
+}
