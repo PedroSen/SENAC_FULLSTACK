@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+<body>
+    <!--5. Construa uma página onde o usuário digitará o valor de um produto e o programa descontará 7% do valor do produto.-->
+    <script>
+        var valor = parseFloat(prompt("Insira o valor do produto: "));
+
+        var valorDescontado = valor - (0.07 * valor);
+
+        document.writeln("O valor do produto após o desconto é R$ " + valorDescontado);
+    </script>
+</body>
+</html>

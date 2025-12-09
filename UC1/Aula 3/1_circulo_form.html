@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Círculo</title>
+</head>
+<body>
+
+    <form action="">
+        Digite o valor do raio do Círculo: 
+        <br><br>
+        <input type="number" id="raio">
+        <br><br>
+        <button type="button" onclick="calcular()">Calcular</button>
+    </form>
+    <br><br>
+    <div id="resposta"></div>
+
+    <script>
+        function calcular(){
+
+            let raio = document.getElementById("raio").value;
+
+            raio = parseFloat(raio);
+            let area = Math.PI * Math.pow(raio,2);
+            let perimetro = 2 * Math.PI * raio
+
+            document.getElementById("resposta").innerHTML = "Área: " + area + "<br>Perímetro: " + perimetro;
+        }
+    </script>
+
+</body>
+</html>
