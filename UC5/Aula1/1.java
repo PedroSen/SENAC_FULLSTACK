@@ -8,3 +8,11 @@ public class Classe1{
         System.out.println("Média: " + ((a + b)/2.0));
     }
 }
+
+public class Cliente{
+    String nome;
+    int cpf;
+    int identidade;
+
+    void set
+}
