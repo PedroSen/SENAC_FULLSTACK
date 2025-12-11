@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função 2</title>
+</head>
+
+<body>
+    <h2>Função com múltiplos parâmetros</h2>
+    <form action="">
+        <label for="">Numero 1</label><br />
+        <input type="text" id="n1"><br />
+        <label for="">Numero 2</label><br />
+        <input type="text" id="n2"><br /><br />
+        <button type="button" onclick="calcular()">Calcular</button>
+        <button type="reset">Limpar</button>
+    </form>
+    <div id="resultado"></div>
+    <div id="resultado2"></div>
+    <div id="resultado3"></div>
+    <div id="resultado4"></div>
+    <script>
+        function calcular() {
+            let num1 = parseInt(document.getElementById("n1").value);
+            let num2 = parseInt(document.getElementById("n2").value);
+            //somar -- fazendo uma função chamar outra função.
+            resul1 = somar(num1, num2);
+            resul2 = subtrair(num1, num2);
+            resul3 = multiplicar(num1, num2);
+            resul4 = dividir(num1, num2);
+
+            //retornar para a tela                              10      +      20      =   
+            document.getElementById("resultado").textContent = num1 + " + " + num2 + " = " + resul1;
+            document.getElementById("resultado2").textContent = num1 + " - " + num2 + " = " + resul2;
+            document.getElementById("resultado3").textContent = num1 + " x " + num2 + " = " + resul3;
+            document.getElementById("resultado4").textContent = num1 + " ÷ " + num2 + " = " + resul4;
+
+        }//fecha a função calcular
+        function somar(a, b) {
+            return a + b;
+        }
+        function subtrair(a, b) {
+            return a - b;
+        }
+        function multiplicar(a, b) {
+            return a * b;
+        }
+        function dividir(a, b) {
+            return a / b;
+        }
+            
+    </script>
+</body>
+
+</html>

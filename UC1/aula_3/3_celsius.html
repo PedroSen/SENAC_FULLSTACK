@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celsius</title>
+</head>
+<body>
+
+    <form action="">
+        Digite o valor da temperatura em fahrenheit: 
+        <br><br>
+        <input type="number" id="fahrenheit">
+        <br><br>
+        <button type="button" onclick="converter()">Converter</button>
+    </form>
+    <br><br>
+    <div id="resposta"></div>
+
+    <script>
+        function converter(){
+            let fahrenheit = parseFloat(document.getElementById("fahrenheit").value);
+            let celsius = (fahrenheit - 32) * 5/9;
+
+            document.getElementById("resposta").innerHTML = "Essa temperatura em celsius é " + celsius.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>

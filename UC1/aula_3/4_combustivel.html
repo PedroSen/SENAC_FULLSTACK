@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combustível</title>
+</head>
+<body>
+
+    <form action="">
+        Digite a quantidade de dinheiro você possui para comprar combustível:
+        <br><br>
+        <input type="number" id="dinheiro">
+        <br><br>
+        <button type="button" onclick="calcular()">Calcular</button>
+    </form>
+    <br><br>
+    <div id="resposta"></div>
+
+    <script>
+        function calcular(){
+            let dinheiro = parseFloat(document.getElementById("dinheiro").value);
+            let combustivel = dinheiro/5;
+            let distancia = combustivel * 20
+
+            document.getElementById("resposta").innerHTML = "Com essa quantia, você poderá comprar " + combustivel.toFixed(2) +
+            " litros de combustível, podendo percorrer, no máximo, " + distancia.toFixed(2) + " Km.";
+        }
+    </script>
+
+</body>
+</html>

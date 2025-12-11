@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id=resultado></div>
+    <script>
+        function calcular(){
+            let num1 = parseInt(document.getElementById('n1').value);
+            let num2 = parseInt(document.getElementById('n2').value);
+
+            resul = somar(num1, num2);
+            
+            document.getElementById('resultado').textContent = num1 + " + " + num2 + " + " + resul;
+
+        }
+
+        function somar(a,b){
+            return a + b;
+        }
+
+    </script>
+</body>
+</html>

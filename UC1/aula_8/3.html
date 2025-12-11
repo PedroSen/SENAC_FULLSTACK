@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função 2</title>
+</head>
+
+<body>
+    <h2>Função com múltiplos parâmetros</h2>
+    <form action="">
+        <label for="">Numero 1</label><br />
+        <input type="text" id="n1"><br />
+        <label for="">Numero 2</label><br />
+        <input type="text" id="n2"><br /><br />
+        <label for="">Escolha uma opção + - / *</label><br />
+        <input type="text" id="op"><br />
+
+
+        <button type="button" onclick="calcular()">Calcular</button>
+        <button type="reset">Limpar</button>
+    </form>
+    <div id="resultado"></div>
+
+    <script>
+        function calcular() {
+            document.getElementById("resultado").textContent = "";
+            let num1 = parseInt(document.getElementById("n1").value);
+            let num2 = parseInt(document.getElementById("n2").value);
+            let opcao = document.getElementById("op").value;
+            if (opcao == "+") {
+                simbolo = "+";
+                resul = somar(num1, num2);
+
+            } else if (opcao == "-") {
+                simbolo = "-";
+                resul = subtrair(num1, num2);
+
+            } else if (opcao == "*") {
+                simbolo = "*";
+                resul = multiplicar(num1, num2);
+
+            } else {
+                simbolo = "/";
+                resul = dividir(num1, num2);
+
+            }
+
+            //retornar para a tela                              10      +      20      =   
+            document.getElementById("resultado").textContent = num1 + simbolo + num2 + " = " + resul;
+            
+
+        }//fecha a função calcular
+        function somar(a, b) {
+            return a + b;
+        }
+        function subtrair(a, b) {
+            return a - b;
+        }
+        function multiplicar(a, b) {
+            return a * b;
+        }
+        function dividir(a, b) {
+            return a / b;
+        }
+
+    </script>
+</body>
+
+</html>

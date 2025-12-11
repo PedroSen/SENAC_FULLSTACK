@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou Ímpar</title>
+</head>
+<body>
+    <form action="">
+        Insira um número:
+        <input type="number" id="num1"> <br><br>
+        <button type="button" onclick="calculo()">Calcular</button>
+    </form>
+    <br><br>
+    <div id="resposta"></div>
+
+    <script>
+        function calculo(){
+            let n1 = parseFloat(document.getElementById("num1").value);
+
+            if(n1 % 2 == 0){
+                document.getElementById("resposta").innerHTML = "O número é par.";
+            } else {
+                document.getElementById("resposta").innerHTML = "O número é ímpar.";
+            }
+
+
+        }
+    </script>
+</body>
+</html>

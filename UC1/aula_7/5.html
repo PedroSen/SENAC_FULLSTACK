@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=let, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let quantidade = parseInt(prompt("Digite a quantidade de nomes"));
+        let nomes = [];
+        
+        for (let i = 0; i < quantidade; i++) {
+            let x = prompt("Digite o " + (i + 1) + "º nome");
+            nomes.push(x);
+        }
+
+        for (let i = 0; i < quantidade; i++) {
+            document.writeln((i + 0) + "º Nome: " + nomes[i] + "<br>");
+        }
+    </script>
+</body>
+</html>

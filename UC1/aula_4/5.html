@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    <form action="">
+        PESO:
+        <input type="number" id="peso"> <br><br>
+        ALTURA:
+        <input type="number" id="altura"> <br><br>
+        <button type="button" onclick="imc()">Calcular IMC</button>
+    </form>
+    <br><br>
+    <div id="IMC"></div>
+    <div id="classificacao"></div>
+
+    <script>
+        function imc(){
+            let p = parseFloat(document.getElementById("peso").value);
+            let a = parseFloat(document.getElementById("altura").value);
+
+            let i = p/a**2;
+            let classif = "";
+
+            if(i < 18.5){
+                classif = "Magreza";
+            } else if(i >= 18.5 && i <= 24.9){
+                classif = "Normal";
+            } else if(i >= 25 && i <= 29.9){
+                classif = "Sobrepeso";
+            } else if(i >= 30 && i <= 34.9){
+                classif = "Obesidade grau I";
+            } else if(i >= 35 && i <= 39.9){
+                classif = "Obesidade grau II";
+            } else {
+                classif = "Obesidade grau III";
+            }
+            document.getElementById("IMC").innerHTML = "IMC: " + i.toFixed(2);
+            document.getElementById("classificacao").innerHTML = "Classificação: " + classif;
+        }
+        
+    </script>
+</body>
+</html>
