@@ -1,0 +1,58 @@
+<div class="container-fluid min-vh-100 bg-light">
+  <!-- Header -->
+  <header class="bg-primary text-white shadow">
+    <div class="container py-4">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h1 class="display-5 fw-bold">🎓 Sistema de Gestão de Alunos</h1>
+          <p class="lead mb-0">Controle completo de notas e desempenho acadêmico</p>
+        </div>
+        <div class="col-md-4 text-end">
+          <span class="badge bg-light text-primary fs-6">
+            👥 {{ alunos().length }} alunos cadastrados
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container py-4">
+    <div class="row">
+      
+      <!-- Sidebar - Formulário -->
+      <aside class="col-lg-4 mb-4">
+        <app-aluno-form 
+          [aluno]="aluno()" 
+          (onSubmit)="adicionarAluno()">
+        </app-aluno-form>
+        
+        <!-- Botão de exemplo -->
+        <div class="card mt-3">
+          <div class="card-body text-center">
+            <button class="btn btn-outline-primary" 
+                    (click)="adicionarAlunoMock()">
+              ➕ Adicionar Aluno Exemplo
+            </button>
+            <small class="d-block text-muted mt-1">
+              Teste rápido do sistema
+            </small>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Content - Lista de Alunos -->
+      <section class="col-lg-8">
+        <app-aluno-list [alunos]="alunos()"></app-aluno-list>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+      <p class="mb-0">Sistema desenvolvido com Angular • Turma de Programação Web</p>
+    </div>
+  </footer>
+</div>
