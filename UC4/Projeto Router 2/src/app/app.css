@@ -1,0 +1,89 @@
+#wrapper {
+    display: flex;
+  }
+  
+  #content-wrapper {
+    flex: 1;
+    overflow-x: hidden;
+  }
+  
+  /* Estilos do Sidebar */
+  #accordionSidebar {
+    width: 250px;
+    min-height: 100vh;
+    position: fixed;
+    z-index: 1000;
+  }
+  
+  /* Estilos do Content */
+  #content {
+    flex: 1;
+    margin-left: 250px; /* Igual à largura do sidebar */
+  }
+  
+  /* Estilos para o collapse */
+  .collapse {
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    max-height: 0;
+  }
+  
+  .collapse.show {
+    max-height: 200px;
+  }
+  
+  /* Estilos para dropdown */
+  .dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+  
+  .dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  /* Estilos para modal */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+  }
+  
+  .modal.show {
+    display: block;
+  }
+  
+  .modal-dialog {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    #accordionSidebar {
+      margin-left: -250px;
+      transition: margin-left 0.3s;
+    }
+  
+    #accordionSidebar.active {
+      margin-left: 0;
+    }
+  
+    #content {
+      margin-left: 0;
+    }
+  }
+  
