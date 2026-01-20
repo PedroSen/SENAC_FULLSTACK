@@ -1,0 +1,6 @@
+<form th:action="@{/cadastro}" th:object="${usuario}" method="post">
+    <input type="email" th:field="*{email}" placeholder="Email" required>
+    <input type="password" th:field="*{senha}" placeholder="Senha" required>
+    <button type="submit">Cadastrar</button>
+</form>
+<a href="/login">Já tenho conta</a>
