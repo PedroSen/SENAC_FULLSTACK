@@ -1,0 +1,29 @@
+<div class="prosuto-list">
+    <h3>🎓 Lista de produtos</h3>
+    
+    @if (produtos.length === 0) {
+      <div class="alert alert-info">
+        📝 Nenhum produto cadastrado ainda.
+      </div>
+    }
+  
+    <div class="row">
+      @for (produto of produtos; track trackById($index, produto)) {
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 shadow-sm">
+
+            <div class="card-body">
+              <h5 class="card-title">{{ produto.nome }}</h5>
+
+              <p class="card-text">
+                <small class="text-muted">ID: {{ produto.id }}</small><br>
+                <strong>Preço:</strong> R$ {{ produto.preco }}<br>
+                <strong>Categoria:</strong> {{ produto.categoria }}<br>
+              </p>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+  
